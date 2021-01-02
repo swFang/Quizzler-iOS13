@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         // nothing
         updateQuestion(q: getNextQuestion())
+        resetUI()
     }
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
@@ -47,7 +48,7 @@ class ViewController: UIViewController {
             sender.backgroundColor = UIColor.red
         }
         
-        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(resetColor), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(resetUI), userInfo: nil, repeats: false)
     }
     
     func getNextQuestion() -> Question  {
@@ -65,9 +66,12 @@ class ViewController: UIViewController {
         questionLabel.text = q.question
     }
     
-    @objc func resetColor() {
+    @objc func resetUI() {
         trueButton.backgroundColor = UIColor.clear
         falseButton.backgroundColor = UIColor.clear
+        progressBar.progress = (Float(currentQuestion + 1) / Float(quiz.count))
+        
     }
+
 }
 

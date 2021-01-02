@@ -96,7 +96,7 @@
                     </view>
                     <connections>
                         <outlet property="falseButton" destination="tbn-vQ-GyC" id="U2S-ni-a93"/>
-                        <outlet property="progressBar" destination="lct-r7-K34" id="QDw-kr-4hD"/>
+                        <outlet property="progressBar" destination="TXm-qh-7Xg" id="RJK-QS-HQ6"/>
                         <outlet property="questionLabel" destination="rSI-li-mhO" id="hrj-dz-A6u"/>
                         <outlet property="trueButton" destination="oVw-Hl-IRe" id="7kj-59-9Xf"/>
                     </connections>
